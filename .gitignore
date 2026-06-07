@@ -1,0 +1,27 @@
+# Databricks (auth tokens, metadata service URL, bundle state)
+.databricks
+.databricks/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+*.env
+.databricks.env
+
+# Python caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Large local data (public NYC taxi tutorial data — re-downloadable)
+data/

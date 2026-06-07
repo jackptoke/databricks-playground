@@ -1,0 +1,20 @@
+# This is a Declarative Automation Bundle definition for nyc-taxi.
+# The Databricks extension requires databricks.yml configuration file.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+
+bundle:
+  name: nyc-taxi
+
+targets:
+  dev:
+    mode: development
+    default: true
+    # No `host` here on purpose — it's resolved from the `azure-toke` profile
+    # in ~/.databrickscfg (outside the repo), so the workspace URL stays out of
+    # git. Run bundle commands with `-p azure-toke`.
+
+  ## Optionally, there could be 'staging' or 'prod' targets here.
+  #
+  # prod:
+  #   workspace:
+  #     host: https://<your-prod-workspace>.azuredatabricks.net
