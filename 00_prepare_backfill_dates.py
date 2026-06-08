@@ -6,7 +6,7 @@ try:
 
     print(f"Number of months to backfill: {num_months}")
 
-    months = get_backfill_months(num_months=num_months)
+    months = get_backfill_months(num_months=int(num_months))
     print(f"Months to backfill: {months}")
 
     dbutils.jobs.taskValues.set(key="months", value=months)
