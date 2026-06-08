@@ -26,7 +26,7 @@ try:
     ) AS staged
     ON z.location_id = staged.merge_key
 
-    WHEN MATCHED AND staged.valid_to IS NULL
+    WHEN MATCHED AND z.valid_to IS NULL
         AND ( NOT (z.borough <=> staged.borough)
         OR NOT (z.zone <=> staged.zone)
         OR NOT (z.service_zone <=> staged.service_zone)
