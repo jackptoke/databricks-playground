@@ -25,10 +25,10 @@ try:
         # Insert new data into the bronze table
         spark.sql("""
         INSERT INTO nyctaxi.bronze.trips
-        SELECT VendorID AS vendor_id,
+        SELECT CAST(VendorID AS INT) AS vendor_id,
             tpep_pickup_datetime AS pickup_datetime,
             tpep_dropoff_datetime AS dropoff_datetime,
-            passenger_count,
+            CAST(passenger_count AS BIGINT) AS passenger_count,
             trip_distance,
             RatecodeID rate_code_id,
             store_and_fwd_flag,
