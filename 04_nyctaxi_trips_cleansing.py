@@ -30,7 +30,7 @@ try:
             tpep_dropoff_datetime AS dropoff_datetime,
             CAST(COALESCE(passenger_count, 0) AS BIGINT) AS passenger_count,
             trip_distance,
-            RatecodeID rate_code_id,
+            CAST(COALESCE(RatecodeID, 0) AS BIGINT) rate_code_id,
             store_and_fwd_flag,
             PULocationID pickup_location_id,
             DOLocationID dropoff_location_id,
